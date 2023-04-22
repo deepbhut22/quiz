@@ -1,0 +1,14 @@
+<%-include("header")-%>
+    <div id="title">
+        <h1>compose page</h1>
+    </div>
+    <div class="fullp">
+        <div class="content">
+            <form action="/<%=uname%>/compose" method="post">
+                <input type="text" name="qname" id="" placeholder="name of quiz"><br>
+                <input type="number" name="qnums" id="" placeholder="number of questions"><br>
+                <button type="submit">next</button>
+            </form>
+        </div>
+    </div>
+<%-include("footer")-%>

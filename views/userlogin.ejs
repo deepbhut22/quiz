@@ -1,0 +1,24 @@
+<%-include("header")-%>
+
+
+<div class="fullp">
+    <div id="title">
+        <h1>login page</h1>
+    </div>
+    <div class="content">
+        <form action="/login/username" method="post">
+            <label for="">username : </label>
+            <input type="text" name="username" id="uname" placeholder="Ex.deep22" onchange="()=>{const uname = document.getElementById('uname').value;}">
+            <pre><%=tryy%></pre>
+            <!-- <label for="">password : </label>
+            <input type="password" name="password" id="" placeholder="6-8 characters/number/sprecial char">
+            <br><br> -->
+            <button type="submit">next</button>
+            <h4>haven't signed-up yet...click <a href="/signup">here</a> to sign-up</h4>
+        </form>
+    </div>
+</div>
+
+
+
+<%-include("footer")-%>

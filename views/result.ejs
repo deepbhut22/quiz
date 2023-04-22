@@ -1,0 +1,13 @@
+<%-include("header")-%>
+    <h1 id="title">results</h1>
+    <div class="fullp">
+        <div class="contentofres">
+            <%if(nof == 1){%>
+                <h3>1 answer is wrong <%=//tot%></h3>
+            <% }else{ %>
+            <h3><%=nof%> answers are wrong <%=//tot%></h3>
+            <%}%>
+        </div>
+    </div>
+
+<%-include("footer")-%>

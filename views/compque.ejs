@@ -1,0 +1,25 @@
+<%-include("header")-%>
+    <div id="title">
+        <h1>add questions</h1>
+    </div>
+    <div class="fullp">
+        <div class="content">
+            <form action="/<%=uname%>/compose/ques" method="post">
+                <label for=""> Question: </label>
+                <textarea name="qnam" id="" cols="30" rows="5" placeholder="enter question" max></textarea></textarea>
+                <!-- <input type="text" name="qnam" id="" placeholder="enter question"><br> -->
+                <label for="">Options: </label>
+                <% for(let i=0 ; i<4 ; i++){ %>
+                    <input type="text" name="opts" id="" placeholder="enter option<%=i+1%>"><br>
+                <%} %>
+                <label for="">Answer: </label>
+                <input type="number" name="correctnum" id="" placeholder="enter answer"><br>
+                <br>
+                <button type="submit">next</button>
+                <input type="hidden" name="numss" value=<%=numofque%>>
+                <input type="hidden" name="quizname" value=<%=uname%>>
+            </form>
+        </div>
+    </div>
+
+<%-include("footer")-%>

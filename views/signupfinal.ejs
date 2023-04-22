@@ -1,0 +1,23 @@
+<%- include("header")-%>
+
+<div class="fullp">
+    <div id="title">
+        <h1>sign-up page</h1>
+    </div>
+    <div class="content">
+        <form action="/signedup/<%=uname%>" method="post">
+            <label for="">username : </label>
+            <input type="text" name="username" id="" value=<%=uname%>>
+            <!-- <pre><%=//tryy%></pre> -->
+            <label for="">E-mail : </label>
+            <input type="email" name="mail" id="" placeholder="Ex.deepbhut@gmail.com">
+            <label for="">password : </label>
+            <input type="password" name="password" id="" placeholder="6-8 characters/number/sprecial char">
+            <br><br>
+            <button type="submit">sign-up</button>
+            <!-- <h4>haven't signed-up yet...click <a href="/newuser/signup">here</a> to sign-up</h4> -->
+        </form>
+    </div>
+</div>
+
+<%-include("footer")-%>

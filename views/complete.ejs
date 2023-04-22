@@ -1,0 +1,13 @@
+<%-include('header')-%>
+
+<div class="fullp">
+    <div id="title">
+        <h1>successfully completed quiz</h1>
+    </div>
+    <div class="content">
+        <h3>press <a style="color: blue;" href="/questions/<%=uname%>/<%=qname%>/results" >here</a> to see the results</h3>
+    </div>
+</div>
+<input type="hidden" name="total" value=<%=total%>>
+
+<%-include('footer')-%>

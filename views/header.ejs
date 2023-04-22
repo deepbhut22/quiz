@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        .main{
+            width: 100%;
+            height: 100px;
+            background-color: rgba(209,210,212,255);
+            display: flex;
+            justify-content: space-between;
+            background-color: #28282B;
+        }
+        .brand{
+            align-self: center;
+            padding-left: 30px;
+            color:#dedede
+        }
+        .items>ul>li>a:hover{
+            cursor: pointer;
+            transform: scale(2);
+        }
+        .items>ul>li{
+            display: inline-block;
+            align-self: center;
+            padding-top: 41.5px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .items{
+            padding-right: 30px;
+        }
+        .items>ul>li>a{
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            color:#000000;
+        }
+        .footer{
+            width: 100%;
+            height: 80px;
+            background-color: #28282B;
+            text-align: center;
+            align-self: center;
+            padding-top: 30px;
+            color: white;
+            margin-top: 0;
+        }
+        #title{
+            text-align: center;
+            line-height: 2;
+            background-color: rgba(209,210,212,255);
+            margin-bottom: 0;
+        }
+        .content{
+            padding-left: 50px;
+            padding-top: 30px;
+            line-height: 2;
+            min-height: 52.5vh;
+            margin: auto;
+            border-radius: 40px;
+            width: 70%;
+            background-color: rgba(209,210,212,255);
+            box-shadow: 10px 10px 15px #32243d;
+            padding-bottom: 20px;
+        }
+        .contentofque{
+            width: 80%;
+            padding-left: 50px;
+            padding-top: 30px;
+            line-height: 2;
+            min-height: 50vh;
+            max-height: 200vh;
+            margin: auto;
+            border-radius: 40px;
+            background-color: rgba(209,210,212,255);
+            box-shadow: 10px 10px 15px #32243d;
+        }
+        .contentofque>h3,p{
+            width: 80%;
+            /* overflow:scroll; */
+            display: inline-block;
+            overflow-wrap:break-word;
+            /* scroll-behavior: smooth; */
+        }
+        .fullp{
+            width: 100%;
+            background-color: rgba(209,210,212,255);
+            padding-bottom: 30px;
+        }
+        .fullpforque{
+            width: 100%;
+            background-color: rgba(209,210,212,255);
+            padding-bottom: 30px;
+        }
+        .contentofres{
+            min-height: 30vh;
+            width: 80%;
+            padding-left: 50px;
+            padding-top: 30px;
+            line-height: 2;
+            min-height: 50vh;
+            /* max-height: 200vh; */
+            margin: auto;
+            border-radius: 40px;
+            background-color: rgba(209,210,212,255);
+            box-shadow: 10px 10px 15px #32243d;
+        }
+        .names{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            min-height: 62.5vh;
+            background-color: rgba(209,210,212,255);
+            margin-top: 0;
+            padding-bottom: 30px;
+        }
+        .quizname{
+            width: 20%;
+            height: 20vh;
+            border-radius: 20px;
+            background-color: rgba(209,210,212,255);
+            display: flex;
+            justify-content: center;
+            box-shadow: 10px 10px 15px #32243d;
+
+        }
+        .quizlist{
+            
+            flex-basis: 90%;
+            flex-grow: 0;
+            /* width: 150px; */
+            height: 50px;
+            margin:10px;
+            border-radius: 20px;
+            background-color: rgba(209,210,212,255);
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 10px 10px 15px #32243d;
+            padding: 10px;
+            transition: 0.3s;
+            
+        }
+        
+        .deletequiz{
+            display: flex;
+            justify-content: flex-start;
+        }
+        .namee{
+            margin:auto auto auto 10px;
+        }
+        .na{
+            color: black;
+            margin: 0 auto;
+        }
+        .start{
+            /* background-color: aqua; */
+            margin-bottom: 10px;
+            display: flex;
+        }
+        .delete{
+            /* background-color: aqua; */
+            /* padding-top: 40px; */
+            display: flex;
+            justify-content: center;
+            font-weight: lighter;
+            padding-right: 10px;
+        }
+        .delete>a{
+            margin: auto;
+        }
+        .start>a{
+            margin: 0 auto;
+            font-weight:bolder;
+        }
+        .dele{
+            margin:0 auto;
+        }
+        .quizlist:hover{
+            transform: scale(1.02);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input[type="checkbox"]{
+            margin-right: 10px;
+            margin-bottom: 15px;
+        }
+        form>h4{
+            padding-top: 20px;
+        }
+        form>h4>a{
+            color: blue
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="Number"],
+        textarea
+        {
+                width: 100%;
+                padding: 0.5em;
+                /* margin-top: 0.5em; */
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+                font-size: 1em;
+        }
+        form>button{
+                width: 50%;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+                font-size: 1em;
+                margin-top: 30px;
+        }
+        form>p{
+            width: 50%;
+        }
+        label {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 1em;
+        }
+        textarea{
+            resize: vertical;
+        }
+        hr{
+            width: 80%;
+        }
+        form>h3{
+            width: 50%;
+        }
+        .content>h3{
+            margin-left: -50px;
+            text-align: center;
+        }
+        pre{
+            color: red;
+            /* font-weight: bold; */
+            font-size:15px;
+        }
+    </style>
+    
+</head>
+    <div class="main">
+        <div class="brand">
+            <h1>D-quizzes</h1>
+        </div>
+        <div class="items">
+            <ul>
+                <li><a href="/login">login</a></li>
+                <li><a href="/signup">sign-up</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>

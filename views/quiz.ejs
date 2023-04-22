@@ -1,0 +1,30 @@
+<%- include("header") -%>
+<body>
+    <h1 id="title">Quiz!</h1>
+    <div class="fullpforque">
+    <form method="post" action="/questions/<%=uname%>/<%=qname%>">
+        
+        <div class="contentofque">
+            <!-- <div class="que"> -->
+                <h3><%=q%></h3>
+            <!-- </div> -->
+            <hr><hr>
+            <%for(let i=0 ; i<4 ; i++){%>
+                <p><input type="checkbox" name="chbx" id="" value=<%=i%>><%=opt[i]%></p>
+                <hr>
+            <%}%>
+            <input type="hidden" name="hid" value=<%=cor%>>
+            <!-- <input type="hidden" name="ejsq" value=<%=//que._id%>> -->
+            <!-- <input type="hidden" name="qname" value=<%=//name%>> -->
+            <input type="hidden" name="uname" value=<%=uname%>>
+            <input type="hidden" name="qname" value=<%=qname%>>
+
+        
+        <button type="submit">next</button>
+        </div>
+    
+    </form>
+</div>
+
+
+<%-include("footer")-%>
